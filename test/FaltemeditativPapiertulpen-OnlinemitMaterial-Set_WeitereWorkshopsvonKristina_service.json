@@ -1,0 +1,98 @@
+{
+    "_id": {
+        "$oid": "611133038f7ebf4c82f6ae48"
+    },
+    "headers": {
+        "What Is Included": {
+            "active": true,
+            "value": "Was du bekommst \n\n\n\n\n Origami-Papier für Tulpen und Schmetterlinge sowie Nadel und Faden \n Live-Anleitung per Videokonferenz \n Anregung, Inspiration, Entspannung"
+        },
+        "Requirements": {
+            "active": true,
+            "value": "25"
+        },
+        "Good to Know": {
+            "active": false,
+            "value": ""
+        }
+    },
+    "specifications": {
+        "language": ["ENGLISH"],
+        "age": [
+            "SUITABLE_FOR_ALL_AGES"
+        ],
+        "size": [
+            "GROUP"
+        ],
+        "difficultyLevel": [
+            "BEGINNER"
+        ],
+        "accessibility": [
+            "PUBLIC_TRANSPORT"
+        ],
+        "gender": "NOT_APPLICABLE"
+    },
+    "images": [
+        "https://admin.themakery.de/files/provider/403/live-online-workshop-falte-meditative-papiertulpen-04.png"
+    ],
+    "tags": [
+        "helath",
+        "big"
+    ],
+    "bookingType": [
+        "VOUCHER"
+    ],
+    "status": "PENDING",
+    "deleted": false,
+    "competitorName": "Makery",
+    "storeName": "Weitere Workshops von Kristina",
+    "storeImage":
+        "https://admin.themakery.de/files/provider/403/live-online-workshop-falte-meditative-papiertulpen-04.png",
+    "serviceProviderEmail": "sample@sample.com",
+    "storeDescription": "Yoga doesn't have to come with the baggage of added costs and hidden fees the way gyms often do - especially come summertime. Ease some of the stress that comes with subway delays and a busy NYC social life. Practice mindfulness and self-care any day of the week at these free yoga classes around the city. Plus, check out our list of free yoga classes coming up so you can plan your next zen moment.",
+    "introductionVideo": "",
+    "priceWithoutVat": "25",
+    "vat": 0,
+    "eventName": "Falte meditativ Papiertulpen - Online mit Material-Set",
+    "description": "\nIch heiße Kristina, arbeite als selbstständige Grafikdesignerin und bin große Papierliebhaberin. Besonders das Falten von Papier fasziniert mich mit seiner Vielseitigkeit, Haptik, Ästhetik, Schönheit und meditativen Art. In meinen Büchern und Workshops möchte ich die schlichte Freude am Falten sowie die Begeisterung für Farben und Formen vermitteln. \n",
+    "serviceDuration": {
+        "days": 0,
+        "minutes": 0,
+        "hours": 20
+    },
+    "pricePerPerson": "25",
+    "catList": [
+        {
+            "_id": {
+                "$oid": "611133038f7ebf4c82f6ae49"
+            },
+            "categoryId": {
+                "$oid": "60894282b4d74939b41a3642"
+            },
+            "subCategoryId": {
+                "$oid": "60894472b4d74939b41a3648"
+            }
+        }
+    ],
+    "locationType": "NOT_IN_STORE",
+    "coordinates": {
+        "lat": "53.5553681",
+        "lng": "10.0228451"
+    },
+    "location": "Berliner Tor, Hamburg, Germany",
+    "minQuota": 0,
+    "maxQuota": 20,
+    "additionalRequired": 0,
+    "confirmedBooking": null,
+    "remainingAvailability": 20,
+    "oneToOneBooking": false,
+    "scheduleType": "",
+    "createdAt": {
+        "$date": "2021-08-09T13:52:03.797Z"
+    },
+    "updatedAt": {
+        "$date": "2021-08-09T13:52:03.797Z"
+    },
+    "__v": 0,
+    "coverimage": ""
+}

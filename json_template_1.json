@@ -1,0 +1,113 @@
+{
+    "_id": {
+        "$oid": "61efefe052835a85694d2d9d"
+    },
+    "serviceProviderEmail": "pajic72923@bubblybank.com",
+    "NoofSession": 1,
+    "__v": 0,
+    "additionalRequired": null,
+    "bookingType": [
+        "VOUCHER"
+    ],
+    "catList": [
+        {
+            "_id": {
+                "$oid": "61efefe05e325635f129341e"
+            },
+            "categoryId": {
+                "$oid": "6089421fb4d74939b41a3641"
+            },
+            "subCategoryId": {
+                "$oid": "61587bc2df2c351f762efb1a"
+            }
+        },
+        {
+            "_id": {
+                "$oid": "61efefe05e325635f129341f"
+            },
+            "categoryId": {
+                "$oid": "60894282b4d74939b41a3642"
+            },
+            "subCategoryId": {
+                "$oid": "61604362d53e120b149839d6"
+            }
+        }
+    ],
+    "competitorName": "The Makery",
+    "confirmedBooking": null,
+    "coordinates": {
+        "lat": "",
+        "lng": ""
+    },
+    "coverimage": "https://21done-dev.s3-us-east-2.amazonaws.com/public/5fdb5361a6cead1c5995c685/SD7C59OCML.jpeg.jpeg",
+    "createdAt": {
+        "$date": "2022-01-25T12:41:04.444Z"
+    },
+    "description": "I help you navigate the transitional period of moving to a new culture by helping you find your own answers to your questions. With the use of NLP techniques and emotional releases, I will help you work through any foggy period. ",
+    "eventName": "1 on 1 Expat Coaching",
+    "headers": {
+        "What Is Included": {
+            "active": false,
+            "value": ""
+        },
+        "Requirements": {
+            "active": false,
+            "value": ""
+        },
+        "Good to Know": {
+            "active": false,
+            "value": ""
+        },
+        "Service Terms and Conditions": {
+            "active": false,
+            "value": ""
+        }
+    },
+    "images": [
+        "https://21done-dev.s3-us-east-2.amazonaws.com/public/5fdb5361a6cead1c5995c685/SEW0QYXGO3.jpeg.jpeg"
+    ],
+    "introductionVideo": "",
+    "legalBusinessName": "",
+    "location": "",
+    "locationType": "ONLINE",
+    "maxQuota": null,
+    "minQuota": null,
+    "name": "Feng Xia",
+    "oneToOneBooking": false,
+    "onlineMeetingLink": null,
+    "previewImage": "https://21done-dev.s3-us-east-2.amazonaws.com/public/5fdb5361a6cead1c5995c685/19E75R0C8S.jpeg.jpeg",
+    "pricePerPerson": 100,
+    "priceWithoutVat": 100,
+    "remainingAvailability": null,
+    "scheduleType": "",
+    "serviceDuration": {
+        "days": 0,
+        "minutes": 0,
+        "hours": 2
+    },
+    "specifications": {
+        "language": [
+            "DEUTSCH"
+        ],
+        "age": [],
+        "size": [
+            "SINGLE"
+        ],
+        "difficultyLevel": [],
+        "accessibility": [],
+        "gender": ""
+    },
+    "storeDescription": "I help you navigate the transitional period of moving to a new culture by helping you find your own answers to your questions. ",
+    "storeImage": "https://21done-dev.s3-us-east-2.amazonaws.com/public/5fdb5361a6cead1c5995c685/KPBSZE042P.jpeg.jpeg",
+    "storeName": "FX Coaching for Expats",
+    "tags": [
+        "Coaching",
+        "Expat",
+        "Transition"
+    ],
+    "updatedAt": {
+        "$date": "2022-01-25T12:49:40.941Z"
+    },
+    "vat": 0,
+    "status": "PENDING"
+}
