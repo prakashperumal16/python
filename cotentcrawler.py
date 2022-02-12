@@ -76,8 +76,9 @@ soup = bs(dr.page_source,"lxml")
 
 
 for a in soup.find_all('a', href=True):
-    if str(a['href']).startswith('https://themakery.de') & str(a['href']).endswith('/Berlin'):
+    if str(a['href']).startswith('https://themakery.de') & ('workshops' not in str(a['href'])) & ('privacy' not in str(a['href'])):
         link = a['href']
+        # print(link)
         prepare_data(link)
 
 

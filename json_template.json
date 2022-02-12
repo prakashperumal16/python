@@ -42,8 +42,9 @@
         "VOUCHER"
     ],
     "status": "PENDING",
+    "NoofSession": 1,
     "deleted": false,
-    "competitorName": "Makery",
+    "competitorName": "The Makery",
     "storeName": "Dipali",
     "storeImage": "https://21done-dev.s3-us-east-2.amazonaws.com/public/5fdb5361a6cead1c5995c685/***document***0.8469853290557996.png.png",
     "serviceProviderEmail": "sample@sample.com",
@@ -77,7 +78,7 @@
         "lat": "53.5553681",
         "lng": "10.0228451"
     },
-    "location": "Berliner Tor, Hamburg, Germany",
+    "location": "ONLINE",
     "minQuota": 0,
     "maxQuota": 20,
     "additionalRequired": 0,
@@ -86,7 +87,7 @@
     "oneToOneBooking": false,
     "scheduleType": "",
     "createdAt": {
-        "$date": "2021-08-09T13:52:03.797Z"
+        "$date": "2022-02-10T13:52:03.797Z"
     },
     "updatedAt": {
         "$date": "2021-08-09T13:52:03.797Z"
