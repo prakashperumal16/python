@@ -1,3 +1,4 @@
+import datetime
 from bs4 import BeautifulSoup as bs
 import pandas as pd
 pd.set_option('display.max_colwidth', 500)
@@ -8,7 +9,24 @@ import json
 import os
 import re
 
+def get_hours_min(timestr):
+    
+    start_hour = timestr[0].rstrip().split(':')[0]
+    start_min = timestr[0].rstrip().split(':')[1]
+    end_hour = timestr[1].rstrip().split(':')[0]
+    end_min = timestr[1].rstrip().split(':')[1]
 
+    start_date = datetime.date.today()
+    end_date = datetime.date.today()
+    start_date = datetime.datetime(start_date.year, start_date.month, start_date.day, int(start_hour), int(start_min), 0)
+    end_date = datetime.datetime(end_date.year, end_date.month, end_date.day, int(end_hour), int(end_min), 0)
+    total_difference = ( end_date - start_date)
+    total_delta = total_difference.total_seconds()
+    print ((total_delta/60/60))
+
+    hours = (total_delta/60/60)
+    minutes = ((total_delta/60) % 60)
+    return hours,minutes
 
 def prepare_data(url):
      
@@ -55,13 +73,23 @@ def prepare_data(url):
     data[0]['name']=host_name[len(host_name) -1]
 
     data_image = soup.find_all(class_='gallerypreview pgroup-0')
-    image_tag=re.findall(r"'(.*?)'", data_image[0]["style"], re.DOTALL)
-    data[0]["images"] =  image_tag
-    data[0]["storeImage"] =  image_tag
+    image_tag=[]
+    for image in data_image:
+        image_tag.append(re.findall(r"'(.*?)'", image["style"], re.DOTALL)[0])
+    if len(image_tag) > 0:
+        data[0]["images"] =  image_tag
+        data[0]["storeImage"] =  image_tag[0]
+        data[0]["coverimage"] =  image_tag[0]
+        
 
     # language = [str(i.text).strip() for i in soup.find_all(class_='subtitle txt_medium min')]
 
     data[0]['specifications']['language']=subTitles[titles.index('Sprache')]
+    timestr = subTitles[titles.index('Uhrzeit')]
+    if timestr:
+        service_hours, service_min = get_hours_min(timestr.split('-'))
+        data[0]['serviceDuration']['hours'] = int(service_hours)
+        data[0]['serviceDuration']['minutes'] = int(service_min)
 
     outfilename = str(service_name[0])+'_'+str(storeName[0]) +'_service.json'
     outfilename=re.sub('[\s+]', '_', outfilename)
@@ -80,7 +108,6 @@ for a in soup.find_all('a', href=True):
         link = a['href']
         # print(link)
         prepare_data(link)
-
 
 
 
