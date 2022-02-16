@@ -43,9 +43,9 @@ def prepare_data(url):
 
     titles = [str(i.text).strip() for i in soup.find_all(class_='title txt_small marg-xxs-bottom')]
     subTitles = [str(i.text).strip() for i in soup.find_all(class_='subtitle txt_medium min')]
-    print(titles)
-    print()
-
+    
+    
+    data[0]['legalBusinessName']=url
     storeName = [str(i.text).strip() for i in soup.find_all(class_='relatetitle txt_large pad-l-bottom')]
     data[0]['storeName']=storeName[0]
     service_name = [str(i.text).strip() for i in soup.find_all(class_='title_small medium pad-l-bottom')]
@@ -81,15 +81,19 @@ def prepare_data(url):
         data[0]["storeImage"] =  image_tag[0]
         data[0]["coverimage"] =  image_tag[0]
         
-
+    print('here 1')
     # language = [str(i.text).strip() for i in soup.find_all(class_='subtitle txt_medium min')]
+    if 'Sprache' in titles :
+        data[0]['specifications']['language']=subTitles[titles.index('Sprache')]
+    print('here 2')
+    
 
-    data[0]['specifications']['language']=subTitles[titles.index('Sprache')]
-    timestr = subTitles[titles.index('Uhrzeit')]
-    if timestr:
-        service_hours, service_min = get_hours_min(timestr.split('-'))
-        data[0]['serviceDuration']['hours'] = int(service_hours)
-        data[0]['serviceDuration']['minutes'] = int(service_min)
+    if 'Uhrzeit' in titles :
+        timestr = subTitles[titles.index('Uhrzeit')]
+        if timestr:
+            service_hours, service_min = get_hours_min(timestr.split('-'))
+            data[0]['serviceDuration']['hours'] = int(service_hours)
+            data[0]['serviceDuration']['minutes'] = int(service_min)
 
     outfilename = str(service_name[0])+'_'+str(storeName[0]) +'_service.json'
     outfilename=re.sub('[\s+]', '_', outfilename)
@@ -108,6 +112,4 @@ for a in soup.find_all('a', href=True):
         link = a['href']
         # print(link)
         prepare_data(link)
-
-
 
