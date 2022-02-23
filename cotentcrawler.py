@@ -58,7 +58,8 @@ def prepare_data(url):
     data[0]['description']=Service_description[0]
 
     service_image = [str(i.text).strip().replace("\u20ac","") for i in soup.find_all(class_='gallerypreview pgroup-0')]
-    data[0]['coverimage']=service_image[0]
+    if (len(service_image) > 0):
+        data[0]['coverimage']=service_image[0]
 
     what_is_included  = [str(i.text).strip() for i in soup.find_all(class_='serviceitem')]
     data[0]['headers']['What Is Included']['value']=what_is_included[0]
