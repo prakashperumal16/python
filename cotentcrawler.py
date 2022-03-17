@@ -104,13 +104,13 @@ def prepare_data(url):
 
 
 dr = webdriver.Chrome(executable_path=r'/usr/local/bin/chromedriver')
-dr.get("https://themakery.de/online/kosmetik-und-pflege")
+dr.get("https://themakery.de/online/kunst")
 soup = bs(dr.page_source,"lxml")
 
 
 for a in soup.find_all('a', href=True):
     if str(a['href']).startswith('https://themakery.de') & ('workshops' not in str(a['href'])) & ('privacy' not in str(a['href'])):
         link = a['href']
-        # print(link)
+        print(link)
         prepare_data(link)
 
