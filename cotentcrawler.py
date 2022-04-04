@@ -8,6 +8,8 @@ from selenium import webdriver
 import json
 import os
 import re
+import urllib.request
+import requests
 
 def get_hours_min(timestr):
     
@@ -83,6 +85,15 @@ def prepare_data(url):
         data[0]["coverimage"] =  image_tag[0]
         
     print('here 1')
+    for image_url in image_tag:
+        file_name=os.path.basename(image_url)
+        
+        r = requests.get(image_url)
+        with open(service_name[0]+file_name,'wb') as f:
+            f.write(r.content)
+        # urllib.request.urlretrieve(image_url, service_name[0]+file_name)
+
+
     # language = [str(i.text).strip() for i in soup.find_all(class_='subtitle txt_medium min')]
     if 'Sprache' in titles :
         data[0]['specifications']['language']=subTitles[titles.index('Sprache')]
@@ -104,7 +115,7 @@ def prepare_data(url):
 
 
 dr = webdriver.Chrome(executable_path=r'/usr/local/bin/chromedriver')
-dr.get("https://themakery.de/online/kunst")
+dr.get("https://themakery.de/online")
 soup = bs(dr.page_source,"lxml")
 
 
