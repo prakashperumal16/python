@@ -1,0 +1,1 @@
+mongodump --uri="mongodb+srv://root:rootjourney@cluster-21done-prd.xkbvr.mongodb.net/21done-prod-v2?authSource=admin&replicaSet=atlas-93gpql-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true" --db=21done-prod-v2

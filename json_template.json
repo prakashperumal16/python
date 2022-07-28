@@ -86,10 +86,10 @@
     "oneToOneBooking": false,
     "scheduleType": "",
     "createdAt": {
-        "$date": "2022-03-30T13:52:03.797Z"
+        "$date": "2022-07-08T13:52:03.797Z"
     },
     "updatedAt": {
-        "$date": "2022-03-30T13:52:03.797Z"
+        "$date": "2022-07-08T13:52:03.797Z"
     },
     "__v": 0
 }]
